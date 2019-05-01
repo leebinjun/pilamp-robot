@@ -1,0 +1,16 @@
+path_data:
+choosed:C:\Users\Administrator\Desktop\NodeMCU烧录工具及固件\nodemcu_float_0.9.6-dev_20150406.bin;0x00000;
+empty:D:\AITHINKER-ESP8266-SDK-v2.0\AITHINKER-ESP8266-SDK\project\esp_iot_sdk_v0.9.5\bin\at\user1.512.new.bin;0x01000;
+empty:D:\AITHINKER-ESP8266-SDK-v2.0\AITHINKER-ESP8266-SDK\project\esp_iot_sdk_v0.9.5\bin\blank.bin;0x3E000;
+empty:D:\AITHINKER-ESP8266-SDK-v2.0\AITHINKER-ESP8266-SDK\project\esp_iot_sdk_v0.9.5\bin\blank.bin;0x7E000;
+empty:D:\Workspace\esp_iot_sdk_v0.9.5_b1\bin\blank.bin;0x41000;
+empty:;;
+empty:D:\Workspace\Firmware Binary\Ai-thinker-IOBoard-Clould-2014-11-12 231812.bin;0x00000;
+default_path:C:\Users\Administrator\Desktop\NodeMCU烧录工具及固件;
+COM:
+com_port:3
+baudrate:0
+ID_BIND:
+id_bind_en:0
+id_bind_addr:0x
+

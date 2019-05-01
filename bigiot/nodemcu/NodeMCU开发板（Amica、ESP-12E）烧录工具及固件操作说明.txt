@@ -1,0 +1,24 @@
+关于NodeMCU开发板使用乐鑫烧写工具的使用说明：
+
+1、使用数据线把NodeMCU开发板和电脑连接上，并确认安装好驱动程序。
+
+2、进入FLASH_DOWNLOAD_TOOLS_v0.9.3.1文件夹，打开frame_test.exe
+
+3、在0x00000上导入nodemcu_float_0.9.6-dev_20150406.bin或者nodemcu_integer_0.9.6-dev_20150406.bin，并在前面打上勾。
+
+4、SPI SPEED 选择40MHz，SPI MODE 选择DIO，FLASH SIZE 选择32M。
+
+5、com选项选择模块所连接电脑的串口。
+
+6、波特率选择115200
+
+7、点击烧写工具上的点START按钮，进入等待上电同步。
+
+8、此时按住模块的的FLASH键不放，然后再按一下RST键，进入烧写状态后，松开手即可。
+
+9、待进度完成后，即为烧写成功。
+
+10、注意事项，进度完成后会显示erro错误提示，这个不用理会，这是乐鑫的烧写工具的一个bug。
+
+11、最后使用NodeMCU Studio 2015 Build20150403工具进行download自己的程序。
+    具体操作方法请浏览http://bbs.nodemcu.com/t/nodemcujie-shao-si-xia-zai-star-dot-luawen-jian/26
