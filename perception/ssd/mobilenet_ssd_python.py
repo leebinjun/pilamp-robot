@@ -16,8 +16,8 @@ cap = cv2.VideoCapture(0)
 
 #Load the Caffe model 
 # net = cv2.dnn.readNetFromCaffe(args.prototxt, args.weights)
-prototxt = r".\ssd\MobileNetSSD_deploy.prototxt"
-weights = r".\ssd\MobileNetSSD_deploy.caffemodel"
+prototxt = r"C:\Users\Administrator\Desktop\MobilNet_SSD_opencv-master\MobilNet_SSD_opencv-master\MobileNetSSD_deploy.prototxt"
+weights = r"C:\Users\Administrator\Desktop\MobilNet_SSD_opencv-master\MobilNet_SSD_opencv-master\MobileNetSSD_deploy.caffemodel"
 net = cv2.dnn.readNetFromCaffe(prototxt, weights)
 
 

@@ -1,20 +1,14 @@
-# -*- coding: utf-8 -*
-# 【Python+OpenCV】目标跟踪-背景分割器：KNN、MOG2和GMG - CSDN博客 https://blog.csdn.net/lwplwf/article/details/73551648
 import sys, os
 sys.path.append(os.path.dirname(__file__) + os.sep + '..//')
 
 import cv2
-
 import numpy as np
 import tensorflow as tf
-
 import time
-
 from PIL import Image
 from matplotlib.pylab import *
 
 
- 
 # model
 classes = ['fist','five','one','yes']
 model_dir = './handgesture/model/model.ckpt'
@@ -41,9 +35,8 @@ with tf.Session() as sess:
         th = cv2.threshold(fgmask.copy(), 244, 255, cv2.THRESH_BINARY)[1]
         # 下面就跟基本运动检测中方法相同，识别目标，检测轮廓，在原始帧上绘制检测结果
         dilated = cv2.dilate(th, es, iterations=10) # 形态学膨胀
-        # opencv 3.4
         image, contours, hierarchy = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) # 该函数计算一幅图像中目标的轮廓
-        # opencv 4.0
+        # rasp
         # contours, hierarchy = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) # 该函数计算一幅图像中目标的轮廓
         continue_flag = 0
         for c in contours:
