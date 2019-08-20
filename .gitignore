@@ -1,5 +1,9 @@
 \pilamp_hikey970\face\shape_predictor_68_face_landmarks.dat
 \pilamp_hikey970\face\mmod_human_face_detector.dat
+pilamp_hikey970/pirobot/__pycache__/
 
-*\__pycache__
-\pilamp_hikey970\track\__pycache__
+
+
+pilamp_hikey970/pirobot/__pycache__/robot.cpython-36.pyc
+pilamp_hikey970/pirobot/__pycache__/config_a.cpython-36.pyc
+pilamp_hikey970/pirobot/__pycache__/com.cpython-36.pyc

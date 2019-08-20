@@ -1,5 +1,16 @@
 # Python Tkinter Scale和LabeledScale用法 http://c.biancheng.net/view/2509.html
 # python tkinter可以使用的颜色 - wjcaiyf的专栏 - CSDN博客 https://blog.csdn.net/wjciayf/article/details/79261005
+'''
+新版台灯的UI控制器
+
+设置运动速度
+调整5个舵机运动
+
+#TODO@libing
+开灯/关灯
+切换灯模式
+
+'''
 
 import sys,os
 sys.path.append(os.path.dirname(__file__) + os.sep + '../')

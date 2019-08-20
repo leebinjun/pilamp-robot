@@ -28,8 +28,8 @@ class FaceDetect(object):
 
     def detect(self, image, gray):
         (img_h, img_w) = image.shape[:2]
-        cv2.putText(image, "HOG method", (img_w - 200, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
-                    (205, 92, 92), 2)
+        # cv2.putText(image, "HOG method", (img_w - 200, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
+        #             (205, 92, 92), 2)
         # Get faces into webcam's image
         rects = self.detector(gray, 0)
         

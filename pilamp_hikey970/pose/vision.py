@@ -38,7 +38,8 @@ class Handler(object):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         rects = self.detector(gray, 1)
         humans = self.e.inference(image)
-
+ 
+        # 画人体姿态图
         image_h, image_w = image.shape[:2]
         centers = {}
         for human in humans[:1]:  # 只取第一个人
@@ -57,15 +58,18 @@ class Handler(object):
                     continue
                 cv2.line(image, centers[pair[0]], centers[pair[1]], common.CocoColors[pair_order], 3)
 
+        # 标记帧率
         cv2.putText(image,
                     "FPS: %f" % (1.0 / (time.time() - self.fps_time)),
                     (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                     (0, 255, 0), 2)
+        # 框取手机
         for k, d in enumerate(rects):
             cv2.rectangle(image, (d.left(), d.top()), (d.right(), d.bottom()), (0, 255, 0), 2)
 
         self.fps_time = time.time()
 
+        # 判读坐姿是否正确
         if 0 in centers:
             if self.zero_pos is None:
                 self.zero_pos = centers[0]
@@ -78,14 +82,15 @@ class Handler(object):
         else:  # 检测不到也算错误姿势
             self.count_rightpose += 1
 
+        # 判断是否在玩手机
         if len(rects) > 0:
             self.phone_count += 1
         else:
             if self.phone_count > 0:
                 self.phone_count = 0
 
+        # 结果
         print("[Phone    Detector] Found " + str(len(rects)) + " Phone.")
-
         print("[Position Reportor] count_rightpose:", self.count_rightpose)
 
         return image, self.count_rightpose > 10, self.phone_count > 5

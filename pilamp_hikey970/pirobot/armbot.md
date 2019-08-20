@@ -6,6 +6,6 @@ CCHESS-ARMBOT
    │  com.py       串口  
    │  config_a.py  参数  
    │  gui.py       机械臂调试界面    
-   │  model.py     机械臂位置逆运动学解算  
+   │  mouse.py     鼠标控制器    
    └─ robot.py     机械臂类  
 
