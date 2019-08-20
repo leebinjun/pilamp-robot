@@ -1,0 +1,32 @@
+#请在记事本中选择“格式”然后去掉“自动换行上面的勾”，再观察所有的指令是否都在同一行上，在同一行证明没有回车换行符，指令没写完成是不能回车换行的！@
+@Baud#9600$
+@AsrSET#2,4,06000,6000,$
+@AsrMode#2$
+@WakeUpSound#0002,0012$
+@AsrReturn#0$
+
+
+@Volume#5$
+@FreeEditReturn#|001 1524|002 0A0C|012 AB12$
+@WriteKeywords#把灯打开 001|开灯 001|关灯 002|把灯关了 002|打开窗帘 009|把窗帘打开 009|关闭窗帘 011|把窗帘关上 011|窗帘停止 010|开空调 100|关空调 101|开电视 128|What-is-your-name 012|打开客厅灯 014|关闭客厅灯 015|$
+
+
+@WriteFlashText#|001开灯|002关灯|009马上为您打开窗帘|011马上为您关闭窗帘|010窗帘停止|100开空调|101关空调|128开电视$
+
+
+@wakeyword#管家管家$
+
+
+
+
+@BindDOOYA#Num:01,Enable:N,Open:009,Stop:010,Close:011,Set:012,$
+@EnableDOOYA#N$
+@Enable315RF#N$
+@Enable433RF#N$
+@EnableLivoloRF#N$
+@SendRFtimes#10$
+@PT2262Address#F101F$
+@LivoloAddress#001$
+@Reset#$
+
+@TextToSpeech#出厂设置恢复成功！$

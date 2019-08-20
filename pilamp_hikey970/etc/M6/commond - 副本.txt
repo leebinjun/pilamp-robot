@@ -1,0 +1,20 @@
+@WakeUpSound#0013,0016$ 
+
+
+
+@wakeyword#πª∞Ùπª∞Ù$
+
+
+
+@AsrMode#3$
+
+
+
+@WriteKeywords#ª⁄∆Â 001|»œ ‰ 002|$
+
+
+
+
+@WriteFlashText#|001[m52]≤ª»√|002[m52]Œ“”Æ¡À$
+
+
