@@ -123,12 +123,12 @@ while cap.isOpened():
             next_btm_degree = track.btm_servo_control(offset_x)
             next_top_degree = track.top_servo_control(offset_y)
             # 舵机转动
+            # TODO@libing:此处有next_btm_degree未赋值的bug
             arm_lamp.set_cloud_platform_degree(next_btm_degree, next_top_degree)
             # 更新角度值
             track.last_btm_degree = next_btm_degree
             track.last_top_degree = next_top_degree
             # print("X轴偏移量：{} Y轴偏移量：{}".format(offset_x, offset_y))
-           
             # print('底部角度： {} 顶部角度：{}'.format(next_btm_degree, next_top_degree))
             
             count_noface = 0
